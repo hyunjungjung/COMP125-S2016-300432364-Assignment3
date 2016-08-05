@@ -14,7 +14,8 @@
 //IIFE - Immediately Invoked Functiona Expression
 (function () {
     "use strict";
-
+    // define the paragraph object
+    var xhrParagraphsContents;
     //define an array of HTML elements
     var paragraphElements = [];
 
@@ -78,16 +79,39 @@
 
     /* ==== Assignment 3 === */
 
+ function readParagraphs() {
+    // data loaded                everything is ok
+    if ((xhrParagraphsContents.readyState === 4) && (xhrParagraphsContents.status === 200)) {
 
+      var paragraphsContents = JSON.parse(xhrParagraphsContents.responseText);
+      var contents = paragraphsContents.paragraphs;
 
-
-
-    // check to see if paragraph one exists
-    var paragraphElementsLength = paragraphElements.length;
-    for (var index = paragraphElementsLength; index >= 0; index--) {
-        if (paragraphElements[index]) {
-            paragraphElements[index].innerHTML = paragraphs[index];
+      contents.forEach(function (pContents) {
+        var index = pContents["id"];
+        var contents = pContents["content"];
+        console.log(index + " ==> " + pContents);
+        if (paragraphElements [index]) {
+          paragraphElements [index].innerHTML = contents;
         }
+      }, this);
+
     }
+ }
+
+
+
+  function init() {
+
+if  (!xhrParagraphsContents){
+    xhrParagraphsContents = new XMLHttpRequest(); }// step 1 - create xhr object
+    xhrParagraphsContents.abort();
+    xhrParagraphsContents.open("get", "Scripts/paragraphs.json", true); // step 2 - open request
+    xhrParagraphsContents.send(); // step 3 - send request
+    //xhrParagraphsContents.addEventListener("readystatechange", readParagraphs); // step 4
+    xhrParagraphsContents.onreadystatechange=readParagraphs;
+  }
+
+
+window.addEventListener("load", init,false);
 
 })();
