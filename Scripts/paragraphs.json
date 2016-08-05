@@ -1,0 +1,24 @@
+{
+    "paragraphs":[
+        {
+        "id":"0",
+        "content":"<div class='indexFirstSentence'> Loves to meet new people, but kind of shy.</div> <br><div class='picture'> <img src=Assets/shyicon.png></div><br><br><br>"       
+        },
+        {
+        "id":"1",
+        "content":"<br><div class='indexSecondSentence'>The first project is from last semester, COMP213 - Web Interface Design, <br> and it is the main homepage of my portfolio. <br>It contains all assignments and projects I did for last year, and also little about myself.<br><a href='http://studentweb.cencol.ca/hjung3/'>Portfolio - COMP213</a> </div>"       
+        },
+        {
+        "id":"2",
+        "contenet":"<div class='indexSecondSentence'> If you can't avoid it, Enjoy it! <br>Then you will be always happy </div>"
+        },
+        {
+        "id":"3",
+        "content":"<div class='indexSecondSentence'>The second project is a web registration form I developed for a Tennis club, Thornhill Park Tennis Club.<br> <a href='http://studentweb.cencol.ca/hjung3/assignment4/assignment_4.html'>Web Form - Thornhill Park Tennis Club.</a></div>"
+        },
+        {
+        "id":"4",
+        "content":"<div class='indexSecondSentence'>The third project of mine is a website for a realtor, Maria Guadagnolo, with some of her current listings.<br> <a href='http://studentweb.cencol.ca/hjung3/Project/homepage.html'>Homepage - Maria Guadagnolo</a></div>"
+        }
+    ]
+}
