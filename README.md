@@ -1,4 +1,4 @@
-# COMP125-Lesson8
+# COMP125-S2016-300432364-Assignment3
 
-## Objecet Oriented JavaScript
+## Updated Pesonal Mini Portfolio
 
